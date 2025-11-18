@@ -12,7 +12,7 @@ int main(void) {
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
 
     /* 2. Configure PC13 as general purpose output (01) */
-    GPIOC->MODER &= ~(0x3UL << (13 * 2));
+    GPIOC->MODER &= ~GPIO_MODER_MODER13_Msk;
     GPIOC->MODER |=  (0x1UL << (13 * 2));
     GPIOC->OTYPER &= ~(1 << 13);
     GPIOC->OSPEEDR &= ~(0x3UL << (13 * 2));
