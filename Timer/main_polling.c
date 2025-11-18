@@ -22,7 +22,7 @@ int main(void) {
     RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
 
     /* 4. Configure TIM2: PSC and ARR (values chosen for example) */
-    TIM2->PSC = 49999;     // prescaler
+    TIM2->PSC = 15999;     // prescaler
     TIM2->ARR = 999;    // auto-reload value
     TIM2->CNT = 0;       // reset counter
 
